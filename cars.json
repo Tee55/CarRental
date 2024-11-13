@@ -1,0 +1,262 @@
+[
+    {
+        "id": 1,
+        "make": "Toyota",
+        "model": "Camry",
+        "color": "Red",
+        "location": {
+            "province": "Bangkok",
+            "district": "Sukhumvit"
+        },
+        "availability": true,
+        "expected_return_date": "2024-12-01",
+        "price_per_day": 3000
+    },
+    {
+        "id": 2,
+        "make": "Honda",
+        "model": "Civic",
+        "color": "Blue",
+        "location": {
+            "province": "Chiang Mai",
+            "district": "Old City"
+        },
+        "availability": false,
+        "expected_return_date": "2024-11-20",
+        "price_per_day": 2800
+    },
+    {
+        "id": 3,
+        "make": "Nissan",
+        "model": "Altima",
+        "color": "Black",
+        "location": {
+            "province": "Phuket",
+            "district": "Patong"
+        },
+        "availability": true,
+        "expected_return_date": "2024-12-05",
+        "price_per_day": 2900
+    },
+    {
+        "id": 4,
+        "make": "Mazda",
+        "model": "3",
+        "color": "White",
+        "location": {
+            "province": "Bangkok",
+            "district": "Siam"
+        },
+        "availability": true,
+        "expected_return_date": "2024-11-28",
+        "price_per_day": 2600
+    },
+    {
+        "id": 5,
+        "make": "Ford",
+        "model": "Focus",
+        "color": "Silver",
+        "location": {
+            "province": "Pattaya",
+            "district": "Central Pattaya"
+        },
+        "availability": false,
+        "expected_return_date": "2024-11-25",
+        "price_per_day": 2500
+    },
+    {
+        "id": 6,
+        "make": "Chevrolet",
+        "model": "Malibu",
+        "color": "White",
+        "location": {
+            "province": "Chiang Rai",
+            "district": "Wiang"
+        },
+        "availability": true,
+        "expected_return_date": "2024-12-02",
+        "price_per_day": 2300
+    },
+    {
+        "id": 7,
+        "make": "Toyota",
+        "model": "Corolla",
+        "color": "Red",
+        "location": {
+            "province": "Khon Kaen",
+            "district": "Nai Mueang"
+        },
+        "availability": true,
+        "expected_return_date": "2024-11-30",
+        "price_per_day": 2700
+    },
+    {
+        "id": 8,
+        "make": "Honda",
+        "model": "Accord",
+        "color": "Blue",
+        "location": {
+            "province": "Bangkok",
+            "district": "Silom"
+        },
+        "availability": false,
+        "expected_return_date": "2024-12-01",
+        "price_per_day": 3000
+    },
+    {
+        "id": 9,
+        "make": "Nissan",
+        "model": "Sentra",
+        "color": "Gray",
+        "location": {
+            "province": "Phuket",
+            "district": "Kata"
+        },
+        "availability": true,
+        "expected_return_date": "2024-11-27",
+        "price_per_day": 2400
+    },
+    {
+        "id": 10,
+        "make": "Mazda",
+        "model": "6",
+        "color": "Black",
+        "location": {
+            "province": "Bangkok",
+            "district": "Ratchada"
+        },
+        "availability": false,
+        "expected_return_date": "2024-12-03",
+        "price_per_day": 2800
+    },
+    {
+        "id": 11,
+        "make": "Ford",
+        "model": "Fusion",
+        "color": "Silver",
+        "location": {
+            "province": "Hua Hin",
+            "district": "Nong Kae"
+        },
+        "availability": true,
+        "expected_return_date": "2024-11-24",
+        "price_per_day": 2900
+    },
+    {
+        "id": 12,
+        "make": "Chevrolet",
+        "model": "Cruze",
+        "color": "White",
+        "location": {
+            "province": "Pattaya",
+            "district": "South Pattaya"
+        },
+        "availability": false,
+        "expected_return_date": "2024-11-30",
+        "price_per_day": 2200
+    },
+    {
+        "id": 13,
+        "make": "Toyota",
+        "model": "Yaris",
+        "color": "Blue",
+        "location": {
+            "province": "Chiang Mai",
+            "district": "Nimmanhaemin"
+        },
+        "availability": true,
+        "expected_return_date": "2024-12-02",
+        "price_per_day": 2500
+    },
+    {
+        "id": 14,
+        "make": "Honda",
+        "model": "Fit",
+        "color": "Red",
+        "location": {
+            "province": "Krabi",
+            "district": "Ao Nang"
+        },
+        "availability": true,
+        "expected_return_date": "2024-11-26",
+        "price_per_day": 2300
+    },
+    {
+        "id": 15,
+        "make": "Nissan",
+        "model": "Versa",
+        "color": "Blue",
+        "location": {
+            "province": "Bangkok",
+            "district": "Thonglor"
+        },
+        "availability": true,
+        "expected_return_date": "2024-11-29",
+        "price_per_day": 2000
+    },
+    {
+        "id": 16,
+        "make": "Mazda",
+        "model": "CX-3",
+        "color": "Red",
+        "location": {
+            "province": "Bangkok",
+            "district": "Lat Phrao"
+        },
+        "availability": false,
+        "expected_return_date": "2024-12-04",
+        "price_per_day": 2900
+    },
+    {
+        "id": 17,
+        "make": "Ford",
+        "model": "EcoSport",
+        "color": "White",
+        "location": {
+            "province": "Chiang Mai",
+            "district": "Hang Dong"
+        },
+        "availability": true,
+        "expected_return_date": "2024-11-27",
+        "price_per_day": 2400
+    },
+    {
+        "id": 18,
+        "make": "Chevrolet",
+        "model": "Trax",
+        "color": "Blue",
+        "location": {
+            "province": "Phuket",
+            "district": "Kamala"
+        },
+        "availability": false,
+        "expected_return_date": "2024-11-29",
+        "price_per_day": 2800
+    },
+    {
+        "id": 19,
+        "make": "Toyota",
+        "model": "Hilux",
+        "color": "White",
+        "location": {
+            "province": "Bangkok",
+            "district": "Bang Na"
+        },
+        "availability": true,
+        "expected_return_date": "2024-12-03",
+        "price_per_day": 2700
+    },
+    {
+        "id": 20,
+        "make": "Honda",
+        "model": "HR-V",
+        "color": "Gray",
+        "location": {
+            "province": "Pattaya",
+            "district": "Jomtien"
+        },
+        "availability": true,
+        "expected_return_date": "2024-12-01",
+        "price_per_day": 2600
+    }
+]
