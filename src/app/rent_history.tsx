@@ -52,7 +52,7 @@ export default function HistoryPage() {
             .catch((error) => {
                 Alert.alert("Error fetching data", error.message);
             });
-    }, [database]);
+    }, [database, user]);
 
     const filteredData = rentalData.filter((item) => {
         const queryLower = searchQuery.toLowerCase();
