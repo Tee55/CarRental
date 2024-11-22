@@ -1,51 +1,46 @@
 import React from "react";
-import { View, Text, Alert, TouchableOpacity } from "react-native";
+import { View, Text, Alert, TouchableOpacity, StyleSheet } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { StyleSheet } from "react-native";
-import { RootStackParamList } from "../types";
 import { useNavigation } from "expo-router";
 import { NavigationProp } from "@react-navigation/native";
 import { auth } from "../../../firebaseConfig";
+import { RootStackParamList } from "../types";
 
-export default function Header({ title, bg_color, content_color }: { title: string, bg_color?: string | undefined, content_color?: string | undefined }) {
-
+export default function Header({
+    title,
+    bg_color = "#00a3cc", 
+    content_color = "#fff", 
+}: {
+    title: string;
+    bg_color?: string;
+    content_color?: string;
+}) {
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
     const handleGoBack = () => {
         if (navigation.canGoBack()) {
-            navigation.goBack();
+            navigation.goBack(); 
         } else {
-            Alert.alert("No previous screen to go back to");
-            navigation.navigate("home");
+            Alert.alert("No previous screen", "Returning to the home screen.");
+            navigation.navigate("home"); 
         }
     };
 
     const handleSignOut = () => {
-        auth.signOut();
+        auth.signOut(); 
         navigation.navigate("login_signup");
     };
 
     return (
         <View style={[styles.header, { backgroundColor: bg_color }]}>
-            {/* Back Icon */}
             <TouchableOpacity style={styles.backButton} onPress={handleGoBack}>
-                <Ionicons
-                    name="arrow-back"
-                    size={24}
-                    color={content_color}
-                />
+                <Ionicons name="arrow-back" size={24} color={content_color} />
             </TouchableOpacity>
 
-            {/* Title */}
             <Text style={[styles.headerText, { color: content_color }]}>{title}</Text>
 
-            {/* Sign Out Icon */}
-            <TouchableOpacity style={styles.signOutButton} onPress={handleSignOut} >
-                <Ionicons
-                    name="log-out"
-                    size={24}
-                    color={content_color}
-                />
+            <TouchableOpacity style={styles.signOutButton} onPress={handleSignOut}>
+                <Ionicons name="log-out" size={24} color={content_color} />
             </TouchableOpacity>
         </View>
     );
@@ -53,26 +48,23 @@ export default function Header({ title, bg_color, content_color }: { title: stri
 
 const styles = StyleSheet.create({
     header: {
-        flexDirection: 'row',
-        justifyContent: 'center', // Ensures title is centered horizontally
-        alignItems: 'center',
-        backgroundColor: '#00a3cc',
-        paddingVertical: 20,
+        flexDirection: "row",
+        justifyContent: "center", 
+        alignItems: "center",
+        paddingVertical: 15,
         paddingHorizontal: 15,
     },
     backButton: {
-        position: 'absolute',  // Position the back icon on the left
-        left: 15,  // Adjust the position from the left side
+        position: "absolute", 
+        left: 15, 
     },
     signOutButton: {
-        position: 'absolute',  // Position the back icon on the left
-        right: 15,  // Adjust the position from the left side
+        position: "absolute", 
+        right: 15, 
     },
     headerText: {
-        color: 'white',
         fontSize: 18,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        flex: 1,  // Ensures the title is centered
+        fontWeight: "bold",
+        textAlign: "center",
     },
 });
