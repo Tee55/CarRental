@@ -13,6 +13,7 @@ import { getDatabase, ref, push, set } from "firebase/database";
 import { NavigationProp, useRoute, RouteProp } from "@react-navigation/native";
 import globalStyles from "./styles/global";
 import { primary_color } from "./constants";
+import { auth } from "../../firebaseConfig";
 
 type BookingRouteProp = RouteProp<RootStackParamList, 'booking'>;
 
@@ -20,6 +21,7 @@ export default function BookingPage() {
 
     const route = useRoute<BookingRouteProp>();
     const database = getDatabase();
+    const user = auth.currentUser;
 
     // Get the car from the route parameters
     const { car } = route.params;
@@ -30,6 +32,14 @@ export default function BookingPage() {
     const [license, setLicense] = useState("");
 
     const handleConfirm = () => {
+
+        // Check if user is logged in
+        if (!user) {
+            Alert.alert("Error", "Please login to continue.");
+            return;
+        }
+
+        // Check if all fields are filled
         if (!name || !license) {
             Alert.alert("Error", "Please fill in all fields.");
             return;
@@ -45,7 +55,7 @@ export default function BookingPage() {
         };
 
         // Save rental history to Firebase Realtime Database
-        const rentalHistoryRef = ref(database, "rental_history");
+        const rentalHistoryRef = ref(database, `users/${user.uid}/rental_history`);
         const newRentalRef = push(rentalHistoryRef); // Generate a new unique key for the rental history entry
 
         set(newRentalRef, rentalData)

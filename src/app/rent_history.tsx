@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { get, getDatabase, ref } from "firebase/database";
 import { carImages } from "./constants";
 import globalStyles from "./styles/global";
+import { auth } from "../../firebaseConfig";
 
 type RentalItem = {
     id: string;
@@ -20,9 +21,16 @@ export default function HistoryPage() {
 
     const [searchQuery, setSearchQuery] = useState('');
     const [rentalData, setRentalData] = useState<RentalItem[]>([]);
+    const user = auth.currentUser;
 
     useEffect(() => {
-        const rentalHistoryRef = ref(database, "rental_history");
+
+        if (!user) {
+            Alert.alert("Error", "Please login to continue.");
+            return;
+        }
+
+        const rentalHistoryRef = ref(database, `users/${user.uid}/rental_history`);
 
         // Get the rental data from the database
         get(rentalHistoryRef)
